@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { RiSunLine } from "react-icons/ri";
 import { BsMoonStars } from "react-icons/bs";
-import { PiUserCircle } from "react-icons/pi";
+import { RxAvatar } from "react-icons/rx";
 import { Link, NavLink } from "react-router-dom";
 
-import logo from "../assets/images/logo.png";
 import { routes } from "../routes";
-import { DEFAULT_THEME } from "../config";
+import { APP_LOGO, APP_NAME, DEFAULT_THEME } from "../config";
 
 const Navbar = () => {
   const [isAuth, setIsAuth] = useState(false);
@@ -77,13 +76,13 @@ const Navbar = () => {
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
             <Link to="/">
-              <img src={logo} alt="logo" />
+              <img src={APP_LOGO} alt="logo" />
             </Link>
           </div>
         </label>
 
         <h1 className="btn btn-ghost pointer-events-none normal-case text-xl p-0">
-          Eating Desi
+          {APP_NAME}
         </h1>
       </div>
 
@@ -125,7 +124,8 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <PiUserCircle className="w-full h-full" />
+                <RxAvatar className="w-full h-full" />
+                {/* <img src={APP_LOGO} alt="logo" />  */}
               </div>
             </label>
             <ul

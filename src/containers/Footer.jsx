@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FiTwitter, FiYoutube, FiFacebook } from "react-icons/fi";
 
-import logo from "../assets/images/logo.png";
+import { APP_LOGO } from "../config";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
             <Link to="/">
-              <img src={logo} alt="logo" />
+              <img src={APP_LOGO} alt="logo" />
             </Link>
           </div>
         </label>

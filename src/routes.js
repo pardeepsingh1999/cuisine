@@ -12,7 +12,7 @@ export const routes = [
     link: "/about-us",
   },
   {
-    title: "My Favorite Recipes",
-    link: "/my-favorite-recipes",
+    title: "Favorite Recipes",
+    link: "/favorite-recipes",
   },
 ];
