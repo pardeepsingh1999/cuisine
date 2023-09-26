@@ -23,21 +23,21 @@ const Footer = () => {
 
       <nav className="grid-flow-col md:place-self-center md:justify-self-end">
         <Link
-          className="btn btn-ghost"
+          className="btn btn-ghost btn-circle"
           to="https://twitter.com"
           target="_blank"
         >
           <FiTwitter className="text-lg" />
         </Link>
         <Link
-          className="btn btn-ghost"
+          className="btn btn-ghost btn-circle"
           to="https://youtube.com"
           target="_blank"
         >
           <FiYoutube className="text-lg" />
         </Link>
         <Link
-          className="btn btn-ghost"
+          className="btn btn-ghost btn-circle"
           to="https://facebook.com"
           target="_blank"
         >
