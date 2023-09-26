@@ -2,8 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import { updateOnlyUserData, updateUserData, clearUserData } from "../actions";
 
 const initialState = {
-  token: null,
   user: null,
+  _tokenResponse: null,
 };
 
 const userDataSlice = createSlice({
@@ -13,8 +13,8 @@ const userDataSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(updateUserData, (state, action) => {
-        state.token = action.payload?.token;
         state.user = action.payload?.user;
+        state._tokenResponse = action.payload?._tokenResponse;
       })
 
       .addCase(updateOnlyUserData, (state, action) => {
@@ -22,8 +22,8 @@ const userDataSlice = createSlice({
       })
 
       .addCase(clearUserData, (state, action) => {
-        state.token = null;
         state.user = null;
+        state._tokenResponse = null;
       });
   },
 });

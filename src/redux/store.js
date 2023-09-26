@@ -3,10 +3,11 @@ import hardSet from "redux-persist/es/stateReconciler/hardSet";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { createLogger } from "redux-logger";
-import { userDataReducer } from "./reducers";
+import { loaderDataReducer, userDataReducer } from "./reducers";
 
 export const rootReducer = combineReducers({
   userData: userDataReducer,
+  loaderData: loaderDataReducer,
 });
 
 const persistConfig = {
@@ -14,7 +15,7 @@ const persistConfig = {
   storage,
   keyPrefix: "",
   stateReconciler: hardSet,
-  blacklist: [],
+  blacklist: ["loaderData"],
 };
 
 const pReducer = persistReducer(persistConfig, rootReducer);

@@ -18,7 +18,7 @@ import ErrorNotFound from "./components/ErrorNotFound";
 import Registration from "./pages/Registration";
 import FavoriteRecipes from "./pages/FavoriteRecipes";
 import ForgotPassword from "./pages/ForgotPassword";
-// import ProtectedRoute from "./components/routes/ProtectedRoute";
+import ProtectedRoute from "./components/routes/ProtectedRoute";
 import PublicRoute from "./components/routes/PublicRoute";
 
 const router = createBrowserRouter(
@@ -37,9 +37,9 @@ const router = createBrowserRouter(
       </Route>
 
       {/* protected routes */}
-      {/* <Route path="" element={<ProtectedRoute redirectRoute={"/login"} />}> */}
-      <Route path="profile" element={<Profile />} />
-      {/* </Route> */}
+      <Route path="" element={<ProtectedRoute redirectRoute={"/login"} />}>
+        <Route path="profile" element={<Profile />} />
+      </Route>
 
       <Route path="*" element={<ErrorNotFound />} />
     </Route>

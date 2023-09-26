@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
         </label>
 
-        <p class="text-primary-content-500">
+        <p className="text-primary-content-500">
           Copyright © 2023 - All right reserved
         </p>
       </aside>

@@ -1,14 +1,21 @@
 import { useState, useEffect } from "react";
 import { RiSunLine } from "react-icons/ri";
 import { BsMoonStars } from "react-icons/bs";
-import { RxAvatar } from "react-icons/rx";
-import { Link, NavLink } from "react-router-dom";
+import { AiOutlineUser } from "react-icons/ai";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 import { routes } from "../routes";
 import { APP_LOGO, APP_NAME, DEFAULT_THEME } from "../config";
+import { useDispatch, useSelector } from "react-redux";
+import { isUserAuthenticated } from "../guards/auth-guard";
+import { clearUserData } from "../redux/actions";
 
 const Navbar = () => {
-  const [isAuth, setIsAuth] = useState(false);
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
+  const userData = useSelector((state) => state?.userData);
 
   // use theme from local storage if available or set light theme
   const [theme, setTheme] = useState(
@@ -24,6 +31,11 @@ const Navbar = () => {
     } else {
       setTheme(DEFAULT_THEME);
     }
+  };
+
+  const _logout = () => {
+    dispatch(clearUserData());
+    navigate("/login");
   };
 
   // set theme state in localstorage on mount & also update localstorage on state change
@@ -104,7 +116,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <div className="flex-none mx-2">
           {/* Toggle button here */}
-          <button className="btn btn-square btn-ghost">
+          <button className="btn btn-circle btn-ghost">
             <label className="swap swap-rotate w-12 h-12">
               <input
                 type="checkbox"
@@ -120,14 +132,23 @@ const Navbar = () => {
           </button>
         </div>
 
-        {isAuth ? (
+        {isUserAuthenticated() ? (
           <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <RxAvatar className="w-full h-full" />
-                {/* <img src={APP_LOGO} alt="logo" />  */}
-              </div>
-            </label>
+            <button className="btn btn-circle btn-ghost">
+              <label className="swap swap-rotate w-12 h-12">
+                {userData?.user?.photoURL ? (
+                  <img
+                    className="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+                    src={userData?.user?.photoURL}
+                    alt="avatar"
+                    title={userData?.user?.displayName}
+                  />
+                ) : (
+                  <AiOutlineUser className="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" />
+                )}
+              </label>
+            </button>
+
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
@@ -146,7 +167,7 @@ const Navbar = () => {
                 <Link
                   to={"/login"}
                   className="p-2 my-1"
-                  onClick={() => setIsAuth((prev) => !prev)}
+                  onClick={() => _logout()}
                 >
                   Logout
                 </Link>
@@ -154,11 +175,7 @@ const Navbar = () => {
             </ul>
           </div>
         ) : (
-          <Link
-            className="btn"
-            to="/login"
-            onClick={() => setIsAuth((prev) => !prev)}
-          >
+          <Link className="btn" to="/login">
             Login
           </Link>
         )}
