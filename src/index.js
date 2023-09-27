@@ -11,7 +11,7 @@ import "./styles/global.scss";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Blog from "./pages/Blog";
+import Blogs from "./pages/Blogs";
 import Profile from "./pages/Profile";
 import AboutUs from "./pages/AboutUs";
 import ErrorNotFound from "./components/ErrorNotFound";
@@ -20,12 +20,14 @@ import FavoriteRecipes from "./pages/FavoriteRecipes";
 import ForgotPassword from "./pages/ForgotPassword";
 import ProtectedRoute from "./components/routes/ProtectedRoute";
 import PublicRoute from "./components/routes/PublicRoute";
+import BlogDetails from "./pages/BlogDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
-      <Route path="blog" element={<Blog />} />
+      <Route path="blogs" element={<Blogs />} />
+      <Route path="blog/:id" element={<BlogDetails />} />
       <Route path="about-us" element={<AboutUs />} />
       <Route path="favorite-recipes" element={<FavoriteRecipes />} />
 

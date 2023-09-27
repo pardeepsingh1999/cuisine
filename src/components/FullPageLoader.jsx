@@ -18,7 +18,6 @@ const FullPageLoader = () => {
           wrapperStyle={{
             margin: "auto",
           }}
-          wrapperClass="dna-wrapper"
         />
 
         {loaderData?.loaderText ? (

@@ -4,8 +4,8 @@ export const routes = [
     link: "/",
   },
   {
-    title: "Blog",
-    link: "/blog",
+    title: "Blogs",
+    link: "/blogs",
   },
   {
     title: "About Us",
