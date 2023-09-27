@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import BlogsMockData from "../mockData/blog.json";
+import BlogsMockData from "../mockData/blogs.json";
 
 const BlogDetails = () => {
   const navigate = useNavigate();
@@ -14,14 +14,14 @@ const BlogDetails = () => {
 
   return (
     <>
-      <div className="flex items-center max-w-sm md:max-w-3xl bg-base-100 mx-auto mb-5">
+      <div className="flex items-center max-w-sm md:max-w-3xl bg-base-100 mx-auto mb-2">
         <button
           className="btn btn-ghost btn-circle"
           onClick={() => navigate(-1)}
         >
           <IoIosArrowBack />
         </button>
-        <h2 className="text-3xl font-extrabold">Blog Details</h2>
+        <h2 className="text-2xl font-extrabold">Blog Details</h2>
       </div>
 
       <div className="card max-w-sm md:max-w-3xl md:card-side bg-base-100 shadow-xl mx-auto mb-5">

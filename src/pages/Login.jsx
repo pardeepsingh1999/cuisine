@@ -281,14 +281,9 @@ const Login = () => {
             </div>
           </form>
 
-          <div className="card-actions justify-end mt-4">
-            <div className="inline-flex items-center justify-center w-full">
-              <hr className="w-64 h-px my-8 bg-gray-700 border-0" />
-              <span className="absolute px-3 bg-gray-700 text-white font-medium">
-                OR
-              </span>
-            </div>
+          <div className="divider">OR</div>
 
+          <div className="card-actions justify-end">
             <div className="inline-flex items-center justify-center w-full">
               <label
                 tabIndex={0}

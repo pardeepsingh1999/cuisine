@@ -7,11 +7,13 @@ const BlogComponent = ({ blog }) => {
   return (
     <>
       <div className="card max-w-sm md:max-w-3xl md:card-side bg-base-100 shadow-xl mx-auto mb-5">
-        <figure className="p-5">
-          <img src={blog?.image_url} alt="thumbnail" className="rounded-xl" />
-        </figure>
+        {blog?.isShowImageLeftSide && (
+          <figure className="p-5">
+            <img src={blog?.image_url} alt="thumbnail" className="rounded-xl" />
+          </figure>
+        )}
 
-        <div className="card-body pt-0 md:p-5">
+        <div className="card-body p-5">
           <h2 className="card-title">{blog?.title}</h2>
           <p className="">{blog?.content}</p>
 
@@ -24,6 +26,12 @@ const BlogComponent = ({ blog }) => {
             </button>
           </div>
         </div>
+
+        {blog?.isShowImageRightSide && (
+          <figure className="p-5">
+            <img src={blog?.image_url} alt="thumbnail" className="rounded-xl" />
+          </figure>
+        )}
       </div>
     </>
   );
