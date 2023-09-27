@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { formatDate } from "../helpers";
 import CardLayout from "./CardLayout";
 
 const BlogCard = ({
@@ -40,7 +41,7 @@ const BlogCard = ({
                   Author: <b>{blog.author}</b>
                 </p>
                 <p>
-                  Published: <b>{blog.date}</b>
+                  Published: <b>{formatDate(blog.date)}</b>
                 </p>
               </div>
             ) : (
