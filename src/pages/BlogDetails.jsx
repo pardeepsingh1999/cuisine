@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { IoIosArrowBack } from "react-icons/io";
+import { useParams } from "react-router-dom";
 import BlogsMockData from "../mockData/blogs.json";
+import HeadingComponent from "../components/HeadingComponent";
+import CardLayout from "../components/CardLayout";
+import BlogCard from "../components/BlogCard";
 
 const BlogDetails = () => {
-  const navigate = useNavigate();
-
   const params = useParams();
 
   const blog = useMemo(() => {
@@ -14,57 +14,19 @@ const BlogDetails = () => {
 
   return (
     <>
-      <div className="flex items-center max-w-sm md:max-w-3xl bg-base-100 mx-auto mb-2">
-        <button
-          className="btn btn-ghost btn-circle"
-          onClick={() => navigate(-1)}
-        >
-          <IoIosArrowBack />
-        </button>
-        <h2 className="text-2xl font-extrabold">Blog Details</h2>
-      </div>
+      <HeadingComponent title="Blog Details" isShowBackBtn />
 
-      <div className="card max-w-sm md:max-w-3xl md:card-side bg-base-100 shadow-xl mx-auto mb-5">
-        {blog ? (
-          <>
-            <figure className="p-5">
-              <img
-                src={blog.image_url}
-                alt="thumbnail"
-                className="rounded-xl"
-              />
-            </figure>
-
-            <div className="card-body pt-0 md:p-5">
-              <h2 className="card-title">{blog.title}</h2>
-              <p className="">
-                {blog.content}{" "}
-                <span>
-                  {blog.tags?.map(
-                    (tag, index) =>
-                      `#${tag}${blog.tags?.length - 1 !== index ? ", " : "."}`
-                  )}
-                </span>
-              </p>
-
-              <div className="card-actions justify-end mt-3">
-                <div>
-                  <p>
-                    Author: <b>{blog.author}</b>
-                  </p>
-                  <p>
-                    Published: <b>{blog.date}</b>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </>
-        ) : (
+      {blog ? (
+        <>
+          <BlogCard blog={blog} isShowImageLeftSide isReadMore />
+        </>
+      ) : (
+        <CardLayout>
           <div className="card-body text-error text-center">
             Blog not found!
           </div>
-        )}
-      </div>
+        </CardLayout>
+      )}
     </>
   );
 };

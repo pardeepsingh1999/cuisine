@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "title": "Sanjeev Kapoor's Office",
+    "position": [28.6941, 77.1375]
+  },
+  {
+    "id": "2",
+    "title": "Vikas Khanna's Office",
+    "position": [28.7041, 77.1025]
+  },
+  {
+    "id": "3",
+    "title": "Ranveer Brar's Office",
+    "position": [28.7169, 77.1155]
+  },
+  {
+    "id": "4",
+    "title": "Saransh Goila's Office",
+    "position": [28.6641, 77.1435]
+  },
+  {
+    "id": "5",
+    "title": "Atul Kochhar's Office",
+    "position": [28.7051, 77.1525]
+  }
+]

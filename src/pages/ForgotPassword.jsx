@@ -127,54 +127,56 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="card max-w-md bg-base-100 shadow-xl mx-auto">
-      <div className="card-body items-center text-center pt-4">
-        <h2 className="card-title">Forgot Password</h2>
+    <>
+      <div className="card max-w-md bg-base-100 shadow-xl mx-auto">
+        <div className="card-body items-center text-center pt-4">
+          <h2 className="card-title">Forgot Password</h2>
 
-        <form onSubmit={_onSubmitForm} className="contents">
-          <div className="form-control w-full max-w-sm">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
-
-            <label className="input-group">
-              <span>
-                <AiOutlineMail />
-              </span>
-              <input
-                type="text"
-                placeholder="Enter your email"
-                className="input input-bordered w-full max-w-sm"
-                value={formFields.email}
-                onChange={(e) => _onChangeFormFields("email", e.target.value)}
-                onBlur={() => _onBlurFormFields("email")}
-              />
-            </label>
-            {errors?.email && (
+          <form onSubmit={_onSubmitForm} className="contents">
+            <div className="form-control w-full max-w-sm">
               <label className="label">
-                <span className="label-text-alt text-error">
-                  {errors.email}
-                </span>
+                <span className="label-text">Email</span>
               </label>
-            )}
-          </div>
+
+              <label className="input-group">
+                <span>
+                  <AiOutlineMail />
+                </span>
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  className="input input-bordered w-full max-w-sm"
+                  value={formFields.email}
+                  onChange={(e) => _onChangeFormFields("email", e.target.value)}
+                  onBlur={() => _onBlurFormFields("email")}
+                />
+              </label>
+              {errors?.email && (
+                <label className="label">
+                  <span className="label-text-alt text-error">
+                    {errors.email}
+                  </span>
+                </label>
+              )}
+            </div>
+
+            <div className="card-actions justify-end mt-4">
+              <button type="submit" className="btn btn-primary">
+                Forgot Password
+              </button>
+            </div>
+          </form>
 
           <div className="card-actions justify-end mt-4">
-            <button type="submit" className="btn btn-primary">
-              Forgot Password
-            </button>
-          </div>
-        </form>
-
-        <div className="card-actions justify-end mt-4">
-          <div className="mt-4">
-            <Link className="link link-primary ml-1" to="/login">
-              Back to Login
-            </Link>
+            <div className="mt-4">
+              <Link className="link link-primary ml-1" to="/login">
+                Back to Login
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,10 +1,13 @@
 import React from "react";
+import CardLayout from "../components/CardLayout";
 
 const Home = () => {
   return (
-    <div>
-      <p>Home</p>
-    </div>
+    <>
+      <CardLayout>
+        <p>Home</p>
+      </CardLayout>
+    </>
   );
 };
 
