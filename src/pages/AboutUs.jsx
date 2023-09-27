@@ -1,9 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import AboutCard from "../components/AboutCard";
 import HeadingComponent from "../components/HeadingComponent";
 import OurOfficesMapComponent from "../components/OurOfficesMapComponent";
 import { APP_LOGO } from "../config";
-import AboutMockData from "../mockData/about.json";
 
 const AboutUs = () => {
   const GettoKnowUs = {
@@ -35,17 +34,6 @@ const AboutUs = () => {
 
       <HeadingComponent title="Our Offices" isShowDivider />
       <OurOfficesMapComponent />
-
-      <HeadingComponent title="Meet the Culinary Titans" isShowDivider />
-      {AboutMockData.map((each, index) => (
-        <Fragment key={each.id}>
-          <AboutCard
-            data={each}
-            isShowImageLeftSide={index % 2 === 0}
-            isShowImageRightSide={index % 2 !== 0}
-          />
-        </Fragment>
-      ))}
 
       <HeadingComponent title="Why We Exist" isShowDivider />
       <AboutCard data={OurMission} isShowImageRightSide />

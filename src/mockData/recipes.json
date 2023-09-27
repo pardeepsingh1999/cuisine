@@ -1,0 +1,97 @@
+[
+  {
+    "id": "1",
+    "title": "Butter Chicken",
+    "ingredients": [
+      "500 grams boneless chicken",
+      "2 tablespoons butter",
+      "1 cup tomato puree",
+      "1/2 cup cream",
+      "1 tablespoon ginger-garlic paste",
+      "1 teaspoon red chili powder",
+      "Salt to taste",
+      "1 teaspoon garam masala",
+      "Fresh coriander leaves for garnish"
+    ],
+    "cooking_method": [
+      "Marinate chicken pieces with ginger-garlic paste, red chili powder, and a pinch of salt. Let it sit for 30 minutes.",
+      "Heat butter in a pan and cook the marinated chicken until it turns white.",
+      "Add tomato puree, cream, and salt. Simmer for 10-15 minutes.",
+      "Sprinkle garam masala and garnish with fresh coriander leaves before serving."
+    ],
+    "rating": 4.8,
+    "image_url": "https://www.licious.in/blog/wp-content/uploads/2020/10/butter-chicken-.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Vegetable Biryani",
+    "ingredients": [
+      "2 cups basmati rice",
+      "Assorted vegetables (carrots, peas, potatoes, etc.)",
+      "1 large onion, thinly sliced",
+      "1/4 cup yogurt",
+      "2 tablespoons ginger-garlic paste",
+      "1 teaspoon biryani masala",
+      "1/2 teaspoon turmeric powder",
+      "A pinch of saffron strands",
+      "Fresh mint and coriander leaves for garnish"
+    ],
+    "cooking_method": [
+      "Cook basmati rice and keep aside.",
+      "In a large pan, sauté sliced onions until golden brown. Add ginger-garlic paste and cook for another minute.",
+      "Add assorted vegetables, yogurt, biryani masala, turmeric powder, and salt. Cook until vegetables are tender.",
+      "Layer cooked rice and vegetable mixture. Sprinkle saffron strands and garnish with mint and coriander leaves.",
+      "Cover and cook on low heat for 15-20 minutes."
+    ],
+    "rating": 4.7,
+    "image_url": "https://www.madhuseverydayindian.com/wp-content/uploads/2022/11/easy-vegetable-biryani.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Chole Bhature",
+    "ingredients": [
+      "1 cup chickpeas, soaked overnight",
+      "2 cups all-purpose flour",
+      "1/2 cup yogurt",
+      "1 tablespoon ginger-garlic paste",
+      "1 teaspoon cumin seeds",
+      "1 teaspoon coriander powder",
+      "1/2 teaspoon turmeric powder",
+      "Oil for frying",
+      "Fresh coriander leaves for garnish"
+    ],
+    "cooking_method": [
+      "Pressure cook chickpeas until tender. Drain and keep aside.",
+      "Prepare a dough using all-purpose flour, yogurt, and water. Let it rest for 2 hours.",
+      "Heat oil in a pan, add cumin seeds, ginger-garlic paste, and sauté.",
+      "Add coriander powder, turmeric powder, and cooked chickpeas. Cook for 10 minutes.",
+      "Roll out the dough into puris and deep fry. Serve with chole and garnish with coriander leaves."
+    ],
+    "rating": 4.6,
+    "image_url": "https://t4.ftcdn.net/jpg/06/12/40/05/360_F_612400538_6zlM3lelyUUQjgSDF3VMmm46mCuDQDVN.webp"
+  },
+  {
+    "id": "4",
+    "title": "Palak Paneer",
+    "ingredients": [
+      "200 grams paneer, cubed",
+      "2 cups spinach, blanched and pureed",
+      "1 large onion, finely chopped",
+      "1 tablespoon ginger-garlic paste",
+      "1 teaspoon cumin seeds",
+      "1/2 cup cream",
+      "1 teaspoon garam masala",
+      "Salt to taste",
+      "Butter for cooking"
+    ],
+    "cooking_method": [
+      "Heat butter in a pan, add cumin seeds, and sauté chopped onions until golden brown.",
+      "Add ginger-garlic paste and cook for another minute.",
+      "Add spinach puree, cream, garam masala, and salt. Cook for 5-7 minutes.",
+      "Add cubed paneer and cook for another 2-3 minutes.",
+      "Serve hot with naan or rice."
+    ],
+    "rating": 4.9,
+    "image_url": "https://www.indianhealthyrecipes.com/wp-content/uploads/2020/06/palak-paneer-recipe.jpg"
+  }
+]

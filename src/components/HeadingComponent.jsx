@@ -11,7 +11,7 @@ const HeadingComponent = ({
 
   return (
     <>
-      <div className="max-w-sm md:max-w-3xl bg-base-100 mx-auto mb-2">
+      <div className="max-w-sm sm:max-w-xl md:max-w-4xl bg-base-100 mx-auto mb-2">
         {isShowDivider && <div className="divider" />}
 
         <div className="flex items-center">

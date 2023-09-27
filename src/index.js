@@ -21,11 +21,13 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ProtectedRoute from "./components/routes/ProtectedRoute";
 import PublicRoute from "./components/routes/PublicRoute";
 import BlogDetails from "./pages/BlogDetails";
+import Recipes from "./pages/Recipes";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
+      <Route path="recipes/:id" element={<Recipes />} />
       <Route path="blogs" element={<Blogs />} />
       <Route path="blog/:id" element={<BlogDetails />} />
       <Route path="about-us" element={<AboutUs />} />

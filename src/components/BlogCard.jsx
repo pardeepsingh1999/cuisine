@@ -15,8 +15,12 @@ const BlogCard = ({
     <>
       <CardLayout>
         {isShowImageLeftSide && (
-          <figure className="p-5">
-            <img src={blog?.image_url} alt="thumbnail" className="rounded-xl" />
+          <figure className="p-5 w-full sm:w-[500px] h-[300px] m-auto sm:m-0">
+            <img
+              src={blog?.image_url}
+              alt="thumbnail"
+              className="rounded-xl w-full h-full"
+            />
           </figure>
         )}
 
@@ -56,8 +60,12 @@ const BlogCard = ({
         </div>
 
         {isShowImageRightSide && (
-          <figure className="p-5">
-            <img src={blog?.image_url} alt="thumbnail" className="rounded-xl" />
+          <figure className="p-5 w-full sm:w-[500px] h-[300px] m-auto sm:m-0">
+            <img
+              src={blog?.image_url}
+              alt="thumbnail"
+              className="rounded-xl w-full h-full"
+            />
           </figure>
         )}
       </CardLayout>

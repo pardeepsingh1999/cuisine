@@ -3,30 +3,54 @@
     "id": "1",
     "title": "Sanjeev Kapoor",
     "content": "With a career spanning decades, Chef Sanjeev Kapoor is a household name in India and beyond. Known for his innovative approach to traditional Indian dishes, Kapoor's recipes have inspired countless kitchens around the world.",
-    "image_url": "https://static.toiimg.com/thumb/48202473.cms?resizemode=4&width=1200"
+    "image_url": "https://res.cloudinary.com/dlwhuhzzp/image/upload/v1695841644/cuisine/frr0vabo4suukylilghx.webp",
+    "yearsOfExperience": 30,
+    "recipes": 4,
+    "likes": "5.9 million"
   },
   {
     "id": "2",
     "title": "Vikas Khanna",
     "content": "Chef Vikas Khanna's culinary journey is a testament to his dedication and passion for food. His innovative techniques and deep respect for traditional Indian flavors have earned him a well-deserved spot on the international culinary stage.",
-    "image_url": "https://fabceleby.in/wp-content/uploads/2023/01/Vikas-Khanna-Net-Worth.jpg"
+    "image_url": "https://fabceleby.in/wp-content/uploads/2023/01/Vikas-Khanna-Net-Worth.jpg",
+    "yearsOfExperience": 20,
+    "recipes": 4,
+    "likes": "1.5 million"
   },
   {
     "id": "3",
     "title": "Ranveer Brar",
     "content": "Chef Ranveer Brar's culinary expertise is a blend of creativity and tradition. With a penchant for reinventing classic dishes, Brar brings a fresh perspective to Indian cuisine, making it accessible and exciting for a global audience.",
-    "image_url": "https://static.businessworld.in/article/article_extra_large_image/1661586179_s05PVJ_Ranveer_Brar_Victorinox_campaign.jpg"
+    "image_url": "https://static.businessworld.in/article/article_extra_large_image/1661586179_s05PVJ_Ranveer_Brar_Victorinox_campaign.jpg",
+    "yearsOfExperience": 20,
+    "recipes": 4,
+    "likes": "1.3 million"
   },
   {
     "id": "4",
     "title": "Saransh Goila",
     "content": "Known as the Butter Chicken Boy, Chef Saransh Goila has become synonymous with comfort Indian food. His journey from the streets of Delhi to the culinary world showcases his love for authentic flavors and dedication to preserving culinary heritage.",
-    "image_url": "https://yt3.googleusercontent.com/ytc/AOPolaRfAhhTKsDk2sVbA10eNlHlmsmYeJKzJW4MlrHDEw=s900-c-k-c0x00ffffff-no-rj"
+    "image_url": "https://fcic2021.industrylive.in/wp-content/uploads/2021/03/Saransh-Goila-10x10-1.jpg",
+    "yearsOfExperience": 10,
+    "recipes": 4,
+    "likes": "1.1 million"
   },
   {
     "id": "5",
     "title": "Atul Kochhar",
     "content": "Chef Atul Kochhar is a trailblazer in the world of Indian fine dining. His Michelin-starred restaurants have redefined Indian cuisine, pushing boundaries and introducing diners to a world of exquisite flavors and presentations.",
-    "image_url": "https://hospibuz.com/wp-content/uploads/2018/01/06_12_2017-JWMM_RangMahal_ChefAtulKochhar.jpg"
+    "image_url": "https://hospibuz.com/wp-content/uploads/2018/01/06_12_2017-JWMM_RangMahal_ChefAtulKochhar.jpg",
+    "yearsOfExperience": 20,
+    "recipes": 4,
+    "likes": "99,000"
+  },
+  {
+    "id": "6",
+    "title": "Manish Mehrotra",
+    "content": "Chef Manish Mehrotra is renowned for his innovative approach to Indian cuisine. He is known for blending traditional Indian flavors with contemporary techniques to create unique and exciting dishes. Mehrotra's culinary creations have earned him widespread acclaim both in India and internationally.",
+    "image_url": "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/08/18143242/Manish-Mehrotra-Featured-Image.png",
+    "yearsOfExperience": 25,
+    "recipes": 4,
+    "likes": "56,000"
   }
 ]
