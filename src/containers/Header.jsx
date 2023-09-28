@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { RiSunLine } from "react-icons/ri";
 import { BsMoonStars } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 import { routes } from "../routes";
@@ -38,6 +39,18 @@ const Navbar = () => {
     navigate("/login");
   };
 
+  // Closing DaisyUI dropdown using .blur() method
+  const _handleClick = () => {
+    try {
+      const elem = document.activeElement;
+      if (elem) {
+        elem?.blur();
+      }
+    } catch (error) {
+      console.log({ error });
+    }
+  };
+
   // set theme state in localstorage on mount & also update localstorage on state change
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -50,28 +63,16 @@ const Navbar = () => {
     <div className="navbar bg-base-100 shadow-lg px-4 sm:px-8">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+          <label tabIndex={0} className="btn btn-ghost btn-circle md:hidden">
+            <HiOutlineMenuAlt1 className="w-6 h-6" />
           </label>
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {routes.map((each) => (
-              <li key={each.title}>
+              // Closing DaisyUI dropdown using .blur() method
+              <li key={each.title} onClick={_handleClick}>
                 <NavLink
                   to={each.link}
                   className={({ isActive }) =>
@@ -153,7 +154,8 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
+              {/* Closing DaisyUI dropdown using .blur() method */}
+              <li onClick={_handleClick}>
                 <NavLink
                   to={"/profile"}
                   className={({ isActive }) =>

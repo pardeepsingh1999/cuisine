@@ -19,14 +19,10 @@ const FavoriteRecipes = () => {
     <>
       <HeadingComponent
         title="My Favorite Recipes"
-        isShowActionBtn
+        isShowActionBtn={favoriteRecipes?.recipes?.length ? true : false}
         actionBtnClassName="btn btn-ghost text-error btn-xs"
         actionBtnText="Remove All"
-        actionBtnOnClick={() =>
-          favoriteRecipes?.recipes?.length
-            ? dispatch(removeAllFavoriteRecipes())
-            : {}
-        }
+        actionBtnOnClick={() => dispatch(removeAllFavoriteRecipes())}
       />
 
       <CardLayout>
