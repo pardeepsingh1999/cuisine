@@ -63,9 +63,9 @@ const Navbar = () => {
     <div className="navbar bg-base-100 shadow-lg px-4 sm:px-8">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost btn-circle md:hidden">
+          <button tabIndex={0} className="btn btn-circle btn-ghost md:hidden">
             <HiOutlineMenuAlt1 className="w-6 h-6" />
-          </label>
+          </button>
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow bg-base-100 rounded-box w-52"
@@ -86,13 +86,11 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <Link to="/">
-              <img src={APP_LOGO} alt="logo" />
-            </Link>
-          </div>
-        </label>
+        <button className="btn btn-circle btn-ghost">
+          <Link to="/">
+            <img src={APP_LOGO} alt="logo" className="w-10 h-10" />
+          </Link>
+        </button>
 
         <h1 className="btn btn-ghost pointer-events-none normal-case text-xl p-0">
           {APP_NAME}
@@ -135,7 +133,7 @@ const Navbar = () => {
 
         {isUserAuthenticated() ? (
           <div className="dropdown dropdown-end">
-            <button className="btn btn-circle btn-ghost">
+            <button tabIndex={0} className="btn btn-circle btn-ghost">
               <label className="swap swap-rotate w-12 h-12">
                 {userData?.user?.photoURL ? (
                   <img
