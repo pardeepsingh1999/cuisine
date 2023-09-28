@@ -26,7 +26,7 @@ const BlogCard = ({
 
         <div className="card-body p-5">
           <h2 className="card-title">{blog?.title}</h2>
-          <p>
+          <p className="text-justify">
             {blog.content}{" "}
             {isReadMore && (
               <span>

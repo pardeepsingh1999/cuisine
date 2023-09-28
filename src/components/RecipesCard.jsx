@@ -4,6 +4,7 @@ import { AiOutlineStar, AiTwotoneStar } from "react-icons/ai";
 
 import { addFavoriteRecipe } from "../redux/actions";
 import CardLayout from "./CardLayout";
+import { showToast } from "../helpers";
 
 const RecipesCard = ({
   data,
@@ -20,6 +21,14 @@ const RecipesCard = ({
       ? true
       : false;
   }, [favoriteRecipes, data]);
+
+  const _addFavoriteRecipe = () => {
+    if (isFavorite) return;
+
+    dispatch(addFavoriteRecipe({ recipe: { ...data, chef } }));
+
+    showToast("Added to your favorites list", "success");
+  };
 
   return (
     <>
@@ -40,14 +49,18 @@ const RecipesCard = ({
           <h4 className="font-semibold">Ingredients</h4>
           <ul className="list-disc px-5">
             {data?.ingredients?.map((each) => (
-              <li key={each}>{each}</li>
+              <li key={each} className="text-justify">
+                {each}
+              </li>
             ))}
           </ul>
 
           <h4 className="font-semibold">Cooking Method</h4>
           <ul className="list-disc px-5">
             {data?.cooking_method?.map((each) => (
-              <li key={each}>{each}</li>
+              <li key={each} className="text-justify">
+                {each}
+              </li>
             ))}
           </ul>
 
@@ -57,11 +70,7 @@ const RecipesCard = ({
             </p>
             <button
               className="btn btn-ghost btn-circle"
-              onClick={() =>
-                !isFavorite
-                  ? dispatch(addFavoriteRecipe({ recipe: { ...data, chef } }))
-                  : {}
-              }
+              onClick={() => _addFavoriteRecipe()}
             >
               {isFavorite ? (
                 <AiTwotoneStar className="w-full h-full" />

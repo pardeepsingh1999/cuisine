@@ -22,7 +22,6 @@ const AboutUs = () => {
   const GetInspired = {
     title: "Get Inspired",
     content: `Join us on a culinary journey that celebrates innovation, tradition, and the boundless creativity of these esteemed Indian chefs. Whether you're an aspiring chef, a home cook, or simply someone who loves good food, you'll find inspiration and insight within these pages.
-
       Thank you for being a part of our culinary community!`,
     image_url: APP_LOGO,
   };

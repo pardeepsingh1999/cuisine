@@ -17,7 +17,7 @@ const AboutCard = ({
 
         <div className="card-body p-5">
           <h2 className="card-title">{data?.title}</h2>
-          <p>{data?.content}</p>
+          <p className="text-justify">{data?.content}</p>
         </div>
 
         {isShowImageRightSide && (

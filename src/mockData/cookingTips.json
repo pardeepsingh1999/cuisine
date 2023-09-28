@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Mastering the Art of Tadka",
+    "content": "Tadka, also known as tempering, is a fundamental technique in Desi cooking. It involves infusing hot oil or ghee with whole spices like cumin seeds, mustard seeds, and curry leaves. This flavorful mixture is then added to a dish, imparting a burst of aroma and taste. To master the art of tadka, start by heating your chosen fat in a pan over medium heat. Add the whole spices and let them sizzle, releasing their essence into the oil. Be careful not to burn them! The tadka is typically added towards the end of cooking to preserve its freshness. Experiment with different combinations of spices to create your own signature tadka!",
+    "image_url": "https://res.cloudinary.com/dlwhuhzzp/image/upload/v1695840491/cuisine/gkb2wis0uneta0f4vu6q.webp"
+  },
+  {
+    "id": "2",
+    "title": "Perfecting Roti Making",
+    "content": "Rotis, also known as Indian flatbreads, are a staple in Desi cuisine. To achieve soft and fluffy rotis, start by kneading the dough thoroughly. Use a mix of whole wheat flour and water to get the right consistency. Let the dough rest for at least 30 minutes to allow the gluten to develop. When rolling out the rotis, ensure even thickness for uniform cooking. Use a hot, flat griddle to cook them, flipping them once bubbles start to form. Finish with a touch of ghee for added flavor. With practice, you'll master the art of making perfect rotis!",
+    "image_url": "https://res.cloudinary.com/dlwhuhzzp/image/upload/v1695840490/cuisine/xlybxvkumhv6sxsbjmbp.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Balancing Spices in Curries",
+    "content": "Creating a harmonious blend of spices is key to a flavorful Desi curry. Start with the holy trinity of Indian spices: cumin, coriander, and turmeric. Adjust the quantities based on your preference for heat and aroma. Add chili powder for an extra kick, and garam masala for depth of flavor. Don't forget about fresh ingredients like ginger, garlic, and tomatoes. Remember, it's easier to add more spices than to correct an overly spiced dish. Taste as you go and adjust to achieve the perfect balance for your palate!",
+    "image_url": "https://res.cloudinary.com/dlwhuhzzp/image/upload/v1695840491/cuisine/r5rivzya7zrnnovpvqhl.webp"
+  },
+  {
+    "id": "4",
+    "title": "Flavorful Homemade Garam Masala",
+    "content": "Garam masala is a cornerstone of Desi cuisine. Create your own aromatic blend using whole spices like cardamom, cinnamon, cloves, cumin seeds, and coriander seeds. Toast them lightly in a dry skillet to release their essential oils, then grind them together into a fine powder. Store in an airtight container for up to six months. The freshly ground garam masala will impart a rich and complex flavor to your dishes, elevating them to a new level of deliciousness!",
+    "image_url": "https://res.cloudinary.com/dlwhuhzzp/image/upload/v1695840491/cuisine/prlltxgy2tro8d9czbio.jpg"
+  }
+]
