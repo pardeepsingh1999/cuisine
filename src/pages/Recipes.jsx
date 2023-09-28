@@ -11,7 +11,7 @@ import RecipesMockData from "../mockData/recipes.json";
 const Recipes = () => {
   const params = useParams();
 
-  const data = useMemo(() => {
+  const chef = useMemo(() => {
     return ChefMockData?.find((each) => each.id === params.id);
   }, [params?.id]);
 
@@ -20,15 +20,15 @@ const Recipes = () => {
       {/* "ScrollUp" component to ensure that when the page loads or reloads, it starts at the top rather than in the middle */}
       <ScrollUp />
 
-      <HeadingComponent title={`${data?.title || "Recipes"}`} isShowBackBtn />
-      {data ? (
+      <HeadingComponent title={`${chef?.title || "Recipes"}`} isShowBackBtn />
+      {chef ? (
         <>
-          <ChefCard data={data} isShowImageLeftSide isViewRecipes />
+          <ChefCard data={chef} isShowImageLeftSide isViewRecipes />
 
           <HeadingComponent title="Recipes" isShowDivider />
           {RecipesMockData.map((each, index) => (
             <Fragment key={each.id}>
-              <RecipesCard data={each} isShowImageLeftSide={true} />
+              <RecipesCard data={each} chef={chef} isShowImageLeftSide />
             </Fragment>
           ))}
         </>

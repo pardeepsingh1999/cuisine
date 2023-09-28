@@ -6,6 +6,10 @@ const HeadingComponent = ({
   title,
   isShowDivider = false,
   isShowBackBtn = false,
+  isShowActionBtn = false,
+  actionBtnClassName = "",
+  actionBtnText = "",
+  actionBtnOnClick = () => {},
 }) => {
   const navigate = useNavigate();
 
@@ -24,7 +28,15 @@ const HeadingComponent = ({
             </button>
           )}
 
-          <h2 className="text-2xl font-extrabold">{title}</h2>
+          <div className="flex justify-between items-center w-full">
+            <h2 className="text-2xl font-extrabold">{title}</h2>
+
+            {isShowActionBtn && (
+              <button className={actionBtnClassName} onClick={actionBtnOnClick}>
+                {actionBtnText}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </>

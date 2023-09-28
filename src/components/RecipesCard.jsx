@@ -1,13 +1,25 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AiOutlineStar, AiTwotoneStar } from "react-icons/ai";
+
+import { addFavoriteRecipe } from "../redux/actions";
 import CardLayout from "./CardLayout";
 
 const RecipesCard = ({
   data,
+  chef,
   isShowImageLeftSide = false,
   isShowImageRightSide = false,
 }) => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const favoriteRecipes = useSelector((state) => state?.favoriteRecipes);
+
+  const isFavorite = useMemo(() => {
+    return favoriteRecipes?.recipes?.find((each) => each.id === data.id)
+      ? true
+      : false;
+  }, [favoriteRecipes, data]);
 
   return (
     <>
@@ -44,10 +56,18 @@ const RecipesCard = ({
               Rating: <b>{data?.rating}</b>
             </p>
             <button
-              className="btn btn-primary"
-              onClick={() => navigate(`/recipes/${data?.id}`)}
+              className="btn btn-ghost btn-circle"
+              onClick={() =>
+                !isFavorite
+                  ? dispatch(addFavoriteRecipe({ recipe: { ...data, chef } }))
+                  : {}
+              }
             >
-              Make Favorite
+              {isFavorite ? (
+                <AiTwotoneStar className="w-full h-full" />
+              ) : (
+                <AiOutlineStar className="w-full h-full" />
+              )}
             </button>
           </div>
         </div>

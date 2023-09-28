@@ -1,17 +1,38 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import CardLayout from "../components/CardLayout";
 import HeadingComponent from "../components/HeadingComponent";
+import {
+  removeAllFavoriteRecipes,
+  removeFavoriteRecipe,
+} from "../redux/actions";
 
-const MyFavoriteRecipes = () => {
+const FavoriteRecipes = () => {
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
+  const favoriteRecipes = useSelector((state) => state?.favoriteRecipes);
+
   return (
     <>
-      <HeadingComponent title="My Favorite Recipes" />
+      <HeadingComponent
+        title="My Favorite Recipes"
+        isShowActionBtn
+        actionBtnClassName="btn btn-ghost text-error btn-xs"
+        actionBtnText="Remove All"
+        actionBtnOnClick={() =>
+          favoriteRecipes?.recipes?.length
+            ? dispatch(removeAllFavoriteRecipes())
+            : {}
+        }
+      />
 
       <CardLayout>
         <div className="card-body p-5">
           <div className="overflow-x-auto">
             <table className="table">
-              {/* head */}
               <thead>
                 <tr>
                   <th>Recipe</th>
@@ -20,37 +41,64 @@ const MyFavoriteRecipes = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    <div className="flex items-center space-x-3">
-                      <div className="avatar">
-                        <div className="mask mask-squircle w-12 h-12">
-                          <img
-                            src="/tailwind-css-component-profile-2@56w.png"
-                            alt="Avatar Tailwind CSS Component"
-                          />
+                {favoriteRecipes?.recipes?.length ? (
+                  favoriteRecipes.recipes.map((each) => (
+                    <tr key={each.id}>
+                      <td>
+                        <div className="flex items-center space-x-3">
+                          <div className="avatar">
+                            <div className="mask mask-squircle w-12 h-12">
+                              <img
+                                src={each.image_url}
+                                alt="Avatar Tailwind CSS Component"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-bold">{each.title}</div>
+                          </div>
                         </div>
-                      </div>
-                      <div>
-                        <div className="font-bold">Hart Hagerty</div>
-                        <div className="text-sm opacity-50">United States</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    Zemlak, Daniel and Leannon
-                    <br />
-                    <span className="badge badge-ghost badge-sm">
-                      Desktop Support Technician
-                    </span>
-                  </td>
-                  <th>
-                    <button className="btn btn-ghost btn-xs">View</button>
-                    <button className="btn btn-ghost text-error btn-xs">
-                      Remove
-                    </button>
-                  </th>
-                </tr>
+                      </td>
+                      <td>
+                        <div className="flex items-center space-x-3">
+                          <div className="avatar">
+                            <div className="mask mask-squircle w-12 h-12">
+                              <img
+                                src={each.chef?.image_url}
+                                alt="Avatar Tailwind CSS Component"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-bold">{each.chef?.title}</div>
+                          </div>
+                        </div>
+                      </td>
+                      <th>
+                        <button
+                          className="btn btn-ghost btn-xs"
+                          onClick={() => navigate(`/recipe/${each.id}`)}
+                        >
+                          View
+                        </button>
+                        <button
+                          className="btn btn-ghost text-error btn-xs"
+                          onClick={() =>
+                            dispatch(
+                              removeFavoriteRecipe({ recipeId: each.id })
+                            )
+                          }
+                        >
+                          Remove
+                        </button>
+                      </th>
+                    </tr>
+                  ))
+                ) : (
+                  <tr className="text-center">
+                    <td colSpan={3}>There is no data to display.</td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
@@ -60,4 +108,4 @@ const MyFavoriteRecipes = () => {
   );
 };
 
-export default MyFavoriteRecipes;
+export default FavoriteRecipes;

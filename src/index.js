@@ -22,12 +22,16 @@ import ProtectedRoute from "./components/routes/ProtectedRoute";
 import PublicRoute from "./components/routes/PublicRoute";
 import BlogDetails from "./pages/BlogDetails";
 import Recipes from "./pages/Recipes";
+import RecipeDetails from "./pages/RecipeDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
+      {/* id = chefId */}
       <Route path="recipes/:id" element={<Recipes />} />
+      {/* id = recipeId */}
+      <Route path="recipe/:id" element={<RecipeDetails />} />
       <Route path="blogs" element={<Blogs />} />
       <Route path="blog/:id" element={<BlogDetails />} />
       <Route path="about-us" element={<AboutUs />} />

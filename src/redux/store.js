@@ -3,10 +3,15 @@ import hardSet from "redux-persist/es/stateReconciler/hardSet";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { createLogger } from "redux-logger";
-import { loaderDataReducer, userDataReducer } from "./reducers";
+import {
+  favoriteRecipesReducer,
+  loaderDataReducer,
+  userDataReducer,
+} from "./reducers";
 
 export const rootReducer = combineReducers({
   userData: userDataReducer,
+  favoriteRecipes: favoriteRecipesReducer,
   loaderData: loaderDataReducer,
 });
 
