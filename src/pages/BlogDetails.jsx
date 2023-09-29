@@ -4,6 +4,7 @@ import BlogsMockData from "../mockData/blogs.json";
 import HeadingComponent from "../components/HeadingComponent";
 import CardLayout from "../components/CardLayout";
 import BlogCard from "../components/BlogCard";
+import ScrollUp from "../components/ScrollUp";
 
 const BlogDetails = () => {
   const params = useParams();
@@ -14,6 +15,9 @@ const BlogDetails = () => {
 
   return (
     <>
+      {/* "ScrollUp" component to ensure that when the page loads or reloads, it starts at the top rather than in the middle */}
+      <ScrollUp />
+
       <HeadingComponent title="Blog Details" isShowBackBtn />
 
       {blog ? (
